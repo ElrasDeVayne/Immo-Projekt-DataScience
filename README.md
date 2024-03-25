@@ -5,6 +5,8 @@
 24.03.2024 WebScraping für Kanton Bern und St. Gallen durchgeführt.
 24.03.2024 Erstellung erstes EDA in Jupyter
 24.03.2024 Push GitHub 
+25.03.2024 Erstellung und Commit der Jupyter Notebooks für API Zugriff auf OpenStreetMap Daten (overpass API) und Steuerfüsse des Kantons Zürich (Opendata_Swiss)
+
 
 
 WebScraping
