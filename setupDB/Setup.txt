@@ -1,0 +1,71 @@
+https://www.microsoft.com/de-de/download//details.aspx?id=104781
+sql server express
+
+Zuerst neue DB Immo erstellen
+
+/****** Object:  Table [dbo].[Location]    Script Date: 30.03.2024 18:04:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Location](
+	[LocationId] [nvarchar](50) NULL,
+	[Street] [nvarchar](150) NULL,
+	[ZIP] [int] NULL,
+	[longitude] [nvarchar](50) NULL,
+	[latitude] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+
+---
+
+/****** Object:  Table [dbo].[Property]    Script Date: 30.03.2024 18:04:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Property](
+	[ListingId] [nvarchar](50) NULL,
+	[Timestamp] [datetime2](7) NULL,
+	[Rooms] [decimal](5, 1) NULL,
+	[SquareMeter] [int] NULL,
+	[Floor] [nvarchar](50) NULL,
+	[Availability] [nvarchar](100) NULL,
+	[ObjectType] [nvarchar](50) NULL,
+	[YearBuilt] [date] NULL,
+	[Price] [decimal](18, 2) NULL,
+	[AdditionalCost] [decimal](18, 2) NULL,
+	[NetPrice] [decimal](18, 2) NULL,
+	[LocationId] [nvarchar](50) NULL,
+	[PropertyAdditionalFeaturesId] [nvarchar](50) NULL,
+	[PropertyDescription] [nvarchar](4000) NULL,
+	[Vendor] [nvarchar](50) NULL,
+	[Canton] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+----
+/****** Object:  Table [dbo].[PropertyAdditionalFeatures]    Script Date: 30.03.2024 18:05:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[PropertyAdditionalFeatures](
+	[ListingId] [nvarchar](50) NULL,
+	[Feature] [nvarchar](250) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+

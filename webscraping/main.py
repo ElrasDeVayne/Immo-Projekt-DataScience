@@ -9,15 +9,14 @@ import uuid
 user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36'
 conn_str = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=tcp:immozhaw.database.windows.net,1433;DATABASE=Immo;UID=immoadmin;PWD=zhaw$1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 
-canton = 'bern' #always set the canton!
-### don't run unless changing the canton. So far scraped: Zurich, Bern, St. Gallen. Change canton in line 12 + 16 for scraping and deactivate line 14
-if False:
-    for page in range(1, 50): # has 50 pages
-        response = requests.get("https://www.immoscout24.ch/de/immobilien/mieten/kanton-bern?pn="+str(page))
+canton = 'ge'  #always set the canton!
+if True:
+    for page in range(1, 30):  # has 50 pages
+        response = requests.get("https://www.immoscout24.ch/de/immobilien/mieten/kanton-genf?pn="+str(page))
         print("Seite: "+str(page))
         soup = BeautifulSoup(response.content, 'html.parser')
         body = soup.find("body")
-        listItem = 1 #max 20 per Page
+        listItem = 1  #max 20 per Page
         for title in soup.find_all( class_='ResultList_listItem_j5Td_'):  # Replace 'h2' and 'class_' with the correct tag and class
             if listItem < 21:
                 print("Item: " + str(listItem))
