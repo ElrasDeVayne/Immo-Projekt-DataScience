@@ -11,7 +11,7 @@ conn_str = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=tcp:immozhaw.database.
 
 canton = 'ge'  #always set the canton!
 if True:
-    for page in range(1, 30):  # has 50 pages
+    for page in range(1, 50):  # has 50 pages
         response = requests.get("https://www.immoscout24.ch/de/immobilien/mieten/kanton-genf?pn="+str(page))
         print("Seite: "+str(page))
         soup = BeautifulSoup(response.content, 'html.parser')
