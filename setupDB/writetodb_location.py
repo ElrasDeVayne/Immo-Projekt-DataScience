@@ -6,7 +6,7 @@ conn_str = 'DRIVER={SQL Server};SERVER=ANNINAYOGA\SQLEXPRESS;DATABASE=Immo;Trust
 
 
 
-data = pd.read_csv (r'Location.csv',sep=';')
+data = pd.read_csv (r'C:\Users\AnninaBerweger\datascience-immo\Immo-Projekt-DataScience\Location_v2.csv',sep=',')
 df = pd.DataFrame(data)
 print(df.shape)
 df = df[df['ZIP']>0]
@@ -25,11 +25,13 @@ df = df.replace({np.nan:None})
 for row in df.itertuples():
     try:
         cursor.execute('''
-                    INSERT INTO Location ([LocationId],[Street], [ZIP])
-                    VALUES (?,?,?)''',
+                    INSERT INTO Location ([LocationId],[Street],[ZIP],[longitude],[latitude])
+                    VALUES (?,?,?,?,?)''',
                     row.LocationId,
                     row.Street,
-                    row.ZIP
+                    row.ZIP,
+                    row.longitude,
+                    row.latitude
                     )
         conn.commit()
     except Exception as e:
