@@ -7,3 +7,4 @@
 01.04.2024 WebScraping abgeschlossen. Gescrapte Daten aus AzureCloud auf lokale Datenbank gespeichert und Azure Subscription gecancelled. Setup für lokale DB in Ordner setupDB beschrieben. Tables für lokale Datenbank sind in TablesDB. Aufbereitung Data Cleansing (Jupyter 20240401_DataCleansing.ipynb) und EDA (Jupyter 20240401_EDA.ipynb). 
 02.04.2024 Aktualisierung Jupyter EDA+Data Cleansing mit Outliers und noisy data entfernen. 
 05.04.2024 Neues Notebook für die Konvertierung der Adressdaten in Koordinaten hinzugefügt und das daraus resultierende .csv file "Location_v2.csv".
+25.04.2024 Updated Location_v3, created Location_v3_enriched which adds # of restaurants and supermarkets in 500m radius
