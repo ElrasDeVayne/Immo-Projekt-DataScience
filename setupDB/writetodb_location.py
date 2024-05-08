@@ -6,7 +6,7 @@ conn_str = 'DRIVER={SQL Server};SERVER=ANNINAYOGA\SQLEXPRESS;DATABASE=Immo;Trust
 
 
 
-data = pd.read_csv (r'C:\Users\AnninaBerweger\datascience-immo\Immo-Projekt-DataScience\TablesDB\Location_v3_enriched_v6.csv',sep=',')
+data = pd.read_csv (r'C:\Users\AnninaBerweger\datascience-immo\Immo-Projekt-DataScience\TablesDB\Location_v3_enriched_v6.csv',sep=',', encoding='utf-8')
 df = pd.DataFrame(data)
 print(df.shape)
 df = df[df['zip']>0]
