@@ -8,3 +8,4 @@
 02.04.2024 Aktualisierung Jupyter EDA+Data Cleansing mit Outliers und noisy data entfernen. 
 05.04.2024 Neues Notebook für die Konvertierung der Adressdaten in Koordinaten hinzugefügt und das daraus resultierende .csv file "Location_v2.csv".
 25.04.2024 Updated Location_v3, created Location_v3_enriched which adds # of restaurants and supermarkets in 500m radius
+10.05.2024 Created a .csv of the cleaned data: filtered_property_location_clean.csv. Encoded the features in PropertyAdditionalFeatures.csv and saved to df_property_features_encoded.csv. Updated the Data Cleansing part and ran more analyses in 20240401_EDA.ipynb. Creating Heatmap.html.
