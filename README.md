@@ -10,3 +10,4 @@
 25.04.2024 Updated Location_v3, created Location_v3_enriched which adds # of restaurants and supermarkets in 500m radius
 10.05.2024 Created a .csv of the cleaned data: filtered_property_location_clean.csv. Encoded the features in PropertyAdditionalFeatures.csv and saved to df_property_features_encoded.csv. Updated the Data Cleansing part and ran more analyses in 20240401_EDA.ipynb. Creating Heatmap.html.
 11.05.2024 Additional data cleansing of the gps-coordinates and population_density. Update EDA.
+19.05.2024 Updated EDA. Created NLP-File.
